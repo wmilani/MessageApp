@@ -8,9 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		83D7A1F0079FD1289CF6732C /* Pods_MessageCursoViewCode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86CC74D52113E768E891D7E6 /* Pods_MessageCursoViewCode.framework */; };
+		EA079E1B2A38F6DE00D34E7A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA079E1A2A38F6DE00D34E7A /* GoogleService-Info.plist */; };
+		EA079E1D2A38F9C100D34E7A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA079E1C2A38F9C000D34E7A /* Assets.xcassets */; };
 		EA5F4E882A38E0400098641F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5F4E872A38E0400098641F /* AppDelegate.swift */; };
 		EA5F4E8A2A38E0400098641F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5F4E892A38E0400098641F /* SceneDelegate.swift */; };
-		EA5F4E912A38E0420098641F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA5F4E902A38E0420098641F /* Assets.xcassets */; };
 		EA5F4E942A38E0420098641F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA5F4E922A38E0420098641F /* LaunchScreen.storyboard */; };
 		EA5F4EA52A38E0940098641F /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5F4E9D2A38E0930098641F /* LoginVC.swift */; };
 		EA5F4EA62A38E0940098641F /* LoginScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5F4E9F2A38E0930098641F /* LoginScreen.swift */; };
@@ -23,10 +24,11 @@
 		0294FA1334961D70F55158AA /* Pods-MessageCursoViewCode.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MessageCursoViewCode.release.xcconfig"; path = "Target Support Files/Pods-MessageCursoViewCode/Pods-MessageCursoViewCode.release.xcconfig"; sourceTree = "<group>"; };
 		1198A258C49504C0C556E2A8 /* Pods-MessageCursoViewCode.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MessageCursoViewCode.debug.xcconfig"; path = "Target Support Files/Pods-MessageCursoViewCode/Pods-MessageCursoViewCode.debug.xcconfig"; sourceTree = "<group>"; };
 		86CC74D52113E768E891D7E6 /* Pods_MessageCursoViewCode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MessageCursoViewCode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA079E1A2A38F6DE00D34E7A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		EA079E1C2A38F9C000D34E7A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../../ViewCode/CursoViewCode/CursoViewCode/Assets.xcassets; sourceTree = "<group>"; };
 		EA5F4E842A38E0400098641F /* MessageCursoViewCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MessageCursoViewCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA5F4E872A38E0400098641F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EA5F4E892A38E0400098641F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		EA5F4E902A38E0420098641F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EA5F4E932A38E0420098641F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EA5F4E952A38E0420098641F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA5F4E9D2A38E0930098641F /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
@@ -62,7 +64,6 @@
 				1198A258C49504C0C556E2A8 /* Pods-MessageCursoViewCode.debug.xcconfig */,
 				0294FA1334961D70F55158AA /* Pods-MessageCursoViewCode.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -92,9 +93,10 @@
 				EA5F4EA02A38E0940098641F /* Register */,
 				EA5F4E872A38E0400098641F /* AppDelegate.swift */,
 				EA5F4E892A38E0400098641F /* SceneDelegate.swift */,
-				EA5F4E902A38E0420098641F /* Assets.xcassets */,
+				EA079E1C2A38F9C000D34E7A /* Assets.xcassets */,
 				EA5F4E922A38E0420098641F /* LaunchScreen.storyboard */,
 				EA5F4E952A38E0420098641F /* Info.plist */,
+				EA079E1A2A38F6DE00D34E7A /* GoogleService-Info.plist */,
 			);
 			path = MessageCursoViewCode;
 			sourceTree = "<group>";
@@ -218,7 +220,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				EA5F4E942A38E0420098641F /* LaunchScreen.storyboard in Resources */,
-				EA5F4E912A38E0420098641F /* Assets.xcassets in Resources */,
+				EA079E1D2A38F9C100D34E7A /* Assets.xcassets in Resources */,
+				EA079E1B2A38F6DE00D34E7A /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -421,7 +424,6 @@
 				INFOPLIST_FILE = MessageCursoViewCode/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -452,7 +454,6 @@
 				INFOPLIST_FILE = MessageCursoViewCode/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
