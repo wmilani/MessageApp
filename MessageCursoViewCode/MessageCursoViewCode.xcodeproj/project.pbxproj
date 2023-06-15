@@ -18,6 +18,10 @@
 		EA5F4EA72A38E0940098641F /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5F4EA22A38E0940098641F /* RegisterVC.swift */; };
 		EA5F4EA82A38E0940098641F /* RegisterScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5F4EA42A38E0940098641F /* RegisterScreen.swift */; };
 		EA5F4EAB2A38E1E30098641F /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5F4EAA2A38E1E30098641F /* Alert.swift */; };
+		EA7342F22A3A9E3E0091155C /* Extension+UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7342F12A3A9E3E0091155C /* Extension+UIView.swift */; };
+		EA7342F42A3A9F860091155C /* Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7342F32A3A9F860091155C /* Custom.swift */; };
+		EA7342FA2A3AA2CD0091155C /* Extension+Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7342F92A3AA2CD0091155C /* Extension+Button.swift */; };
+		EA7342FC2A3AA49D0091155C /* Extension+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7342FB2A3AA49D0091155C /* Extension+String.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +40,13 @@
 		EA5F4EA22A38E0940098641F /* RegisterVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
 		EA5F4EA42A38E0940098641F /* RegisterScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterScreen.swift; sourceTree = "<group>"; };
 		EA5F4EAA2A38E1E30098641F /* Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		EA7342F12A3A9E3E0091155C /* Extension+UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+UIView.swift"; sourceTree = "<group>"; };
+		EA7342F32A3A9F860091155C /* Custom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Custom.swift; sourceTree = "<group>"; };
+		EA7342F62A3AA1180091155C /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
+		EA7342F72A3AA1180091155C /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
+		EA7342F82A3AA1180091155C /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
+		EA7342F92A3AA2CD0091155C /* Extension+Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Button.swift"; sourceTree = "<group>"; };
+		EA7342FB2A3AA49D0091155C /* Extension+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+String.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +99,7 @@
 		EA5F4E862A38E0400098641F /* MessageCursoViewCode */ = {
 			isa = PBXGroup;
 			children = (
+				EA7342EC2A3A9B4B0091155C /* Utils */,
 				EA5F4EA92A38E1E30098641F /* Alert */,
 				EA5F4E9B2A38E0930098641F /* Login */,
 				EA5F4EA02A38E0940098641F /* Register */,
@@ -157,6 +169,45 @@
 				EA5F4EAA2A38E1E30098641F /* Alert.swift */,
 			);
 			path = Alert;
+			sourceTree = "<group>";
+		};
+		EA7342EC2A3A9B4B0091155C /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				EA7342F52A3AA0EF0091155C /* Fonts */,
+				EA7342F12A3A9E3E0091155C /* Extension+UIView.swift */,
+				EA7342F32A3A9F860091155C /* Custom.swift */,
+				EA7342F92A3AA2CD0091155C /* Extension+Button.swift */,
+				EA7342FB2A3AA49D0091155C /* Extension+String.swift */,
+				EA7342EE2A3A9B660091155C /* Sounds */,
+				EA7342ED2A3A9B5E0091155C /* Fonts */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		EA7342ED2A3A9B5E0091155C /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		EA7342EE2A3A9B660091155C /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
+		EA7342F52A3AA0EF0091155C /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				EA7342F62A3AA1180091155C /* Poppins-Bold.ttf */,
+				EA7342F72A3AA1180091155C /* Poppins-Medium.ttf */,
+				EA7342F82A3AA1180091155C /* Poppins-SemiBold.ttf */,
+			);
+			name = Fonts;
+			path = ../Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,11 +327,15 @@
 			files = (
 				EA5F4E882A38E0400098641F /* AppDelegate.swift in Sources */,
 				EA5F4EA52A38E0940098641F /* LoginVC.swift in Sources */,
+				EA7342F22A3A9E3E0091155C /* Extension+UIView.swift in Sources */,
 				EA5F4EA82A38E0940098641F /* RegisterScreen.swift in Sources */,
 				EA5F4EA72A38E0940098641F /* RegisterVC.swift in Sources */,
+				EA7342F42A3A9F860091155C /* Custom.swift in Sources */,
 				EA5F4E8A2A38E0400098641F /* SceneDelegate.swift in Sources */,
+				EA7342FC2A3AA49D0091155C /* Extension+String.swift in Sources */,
 				EA5F4EA62A38E0940098641F /* LoginScreen.swift in Sources */,
 				EA5F4EAB2A38E1E30098641F /* Alert.swift in Sources */,
+				EA7342FA2A3AA2CD0091155C /* Extension+Button.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
