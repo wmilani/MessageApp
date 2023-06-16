@@ -42,6 +42,20 @@ class RegisterScreen: UIView {
         return image
     }()
     
+    lazy var nameTextField: UITextField = {
+        let tf = UITextField()
+        tf.translatesAutoresizingMaskIntoConstraints = false
+        tf.autocorrectionType = .no
+        tf.backgroundColor = .white
+        tf.borderStyle = .roundedRect
+        tf.keyboardType = .emailAddress
+        tf.placeholder = "Digite seu Nome"
+        tf.font = UIFont.systemFont(ofSize: 14)
+        tf.textColor = .darkGray
+        
+        return tf
+    }()
+    
     lazy var emailTextField: UITextField = {
         let tf = UITextField()
         tf.translatesAutoresizingMaskIntoConstraints = false
@@ -96,6 +110,7 @@ class RegisterScreen: UIView {
     private func configSuperView (){
         self.addSubview(self.backButton)
         self.addSubview(self.imageAddUser)
+        self.addSubview(self.nameTextField)
         self.addSubview(self.emailTextField)
         self.addSubview(self.passwordTextField)
         self.addSubview(self.registerButton)
@@ -107,6 +122,7 @@ class RegisterScreen: UIView {
     }
     
     public func configTextFieldDelegate (delegate:UITextFieldDelegate){
+        self.nameTextField.delegate = delegate
         self.emailTextField.delegate = delegate
         self.passwordTextField.delegate = delegate
     }
@@ -121,10 +137,11 @@ class RegisterScreen: UIView {
     
     public func validaTextFields(){
         
+        let name:String  = self.nameTextField.text ?? ""
         let email:String  = self.emailTextField.text ?? ""
         let password:String = self.passwordTextField.text ?? ""
         
-        if !email.isEmpty && !password.isEmpty {
+        if !name.isEmpty && !email.isEmpty && !password.isEmpty {
             self.configButtonEnable(true)
         } else {
             self.configButtonEnable(false)
@@ -142,6 +159,10 @@ class RegisterScreen: UIView {
         }
     }
     
+    
+    public func getName() -> String {
+        return self.nameTextField.text ?? " "
+    }
     
     public func getEmail() -> String {
         return self .emailTextField.text ?? " "
@@ -173,10 +194,19 @@ class RegisterScreen: UIView {
                     self.imageAddUser.topAnchor),
             self.backButton.leadingAnchor.constraint(equalTo:
                     self.leadingAnchor, constant: 20),
+            
+            
+            self.nameTextField.topAnchor.constraint(equalTo:
+                    self.imageAddUser.bottomAnchor, constant: 10),
+            self.nameTextField.leadingAnchor.constraint(equalTo:
+                    self.leadingAnchor, constant: 20),
+            self.nameTextField.trailingAnchor.constraint(equalTo:
+                    self.trailingAnchor, constant: -20),
+            self.nameTextField.heightAnchor.constraint(equalToConstant: 45),
 
             
             self.emailTextField.topAnchor.constraint(equalTo:
-                    self.imageAddUser.bottomAnchor, constant: 10),
+                    self.nameTextField.bottomAnchor, constant: 15),
             self.emailTextField.leadingAnchor.constraint(equalTo:
                     self.leadingAnchor, constant: 20),
             self.emailTextField.trailingAnchor.constraint(equalTo:
