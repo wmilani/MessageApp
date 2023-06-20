@@ -22,6 +22,9 @@
 		EA7342F42A3A9F860091155C /* Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7342F32A3A9F860091155C /* Custom.swift */; };
 		EA7342FA2A3AA2CD0091155C /* Extension+Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7342F92A3AA2CD0091155C /* Extension+Button.swift */; };
 		EA7342FC2A3AA49D0091155C /* Extension+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7342FB2A3AA49D0091155C /* Extension+String.swift */; };
+		EAD043192A420D5600059899 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD043182A420D5600059899 /* HomeVC.swift */; };
+		EAD0431C2A420DA400059899 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD0431B2A420DA400059899 /* HomeScreen.swift */; };
+		EAD0431F2A420EA200059899 /* NaviView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD0431E2A420EA200059899 /* NaviView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,6 +50,9 @@
 		EA7342F82A3AA1180091155C /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
 		EA7342F92A3AA2CD0091155C /* Extension+Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Button.swift"; sourceTree = "<group>"; };
 		EA7342FB2A3AA49D0091155C /* Extension+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+String.swift"; sourceTree = "<group>"; };
+		EAD043182A420D5600059899 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		EAD0431B2A420DA400059899 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
+		EAD0431E2A420EA200059899 /* NaviView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaviView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,8 +107,9 @@
 			children = (
 				EA7342EC2A3A9B4B0091155C /* Utils */,
 				EA5F4EA92A38E1E30098641F /* Alert */,
-				EA5F4E9B2A38E0930098641F /* Login */,
+				EAD043172A420AC100059899 /* Home */,
 				EA5F4EA02A38E0940098641F /* Register */,
+				EA5F4E9B2A38E0930098641F /* Login */,
 				EA5F4E872A38E0400098641F /* AppDelegate.swift */,
 				EA5F4E892A38E0400098641F /* SceneDelegate.swift */,
 				EA079E1C2A38F9C000D34E7A /* Assets.xcassets */,
@@ -208,6 +215,32 @@
 			);
 			name = Fonts;
 			path = ../Fonts;
+			sourceTree = "<group>";
+		};
+		EAD043172A420AC100059899 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				EAD0431D2A420E7F00059899 /* NaviView */,
+				EAD0431A2A420D8A00059899 /* Screen */,
+				EAD043182A420D5600059899 /* HomeVC.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		EAD0431A2A420D8A00059899 /* Screen */ = {
+			isa = PBXGroup;
+			children = (
+				EAD0431B2A420DA400059899 /* HomeScreen.swift */,
+			);
+			path = Screen;
+			sourceTree = "<group>";
+		};
+		EAD0431D2A420E7F00059899 /* NaviView */ = {
+			isa = PBXGroup;
+			children = (
+				EAD0431E2A420EA200059899 /* NaviView.swift */,
+			);
+			path = NaviView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -325,15 +358,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EAD0431F2A420EA200059899 /* NaviView.swift in Sources */,
 				EA5F4E882A38E0400098641F /* AppDelegate.swift in Sources */,
 				EA5F4EA52A38E0940098641F /* LoginVC.swift in Sources */,
 				EA7342F22A3A9E3E0091155C /* Extension+UIView.swift in Sources */,
 				EA5F4EA82A38E0940098641F /* RegisterScreen.swift in Sources */,
 				EA5F4EA72A38E0940098641F /* RegisterVC.swift in Sources */,
 				EA7342F42A3A9F860091155C /* Custom.swift in Sources */,
+				EAD0431C2A420DA400059899 /* HomeScreen.swift in Sources */,
 				EA5F4E8A2A38E0400098641F /* SceneDelegate.swift in Sources */,
 				EA7342FC2A3AA49D0091155C /* Extension+String.swift in Sources */,
 				EA5F4EA62A38E0940098641F /* LoginScreen.swift in Sources */,
+				EAD043192A420D5600059899 /* HomeVC.swift in Sources */,
 				EA5F4EAB2A38E1E30098641F /* Alert.swift in Sources */,
 				EA7342FA2A3AA2CD0091155C /* Extension+Button.swift in Sources */,
 			);
