@@ -26,7 +26,7 @@ class RegisterVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.registerScreen?.configTextFieldDelegate(delegate: self)
+        self.registerScreen?.configTextFieldDelegate(delegate:self)
         self.registerScreen?.delegate(delegate: self)
         self.auth = Auth.auth()
         self.firestore = Firestore.firestore()
@@ -72,11 +72,12 @@ extension RegisterVC:RegisterScreenProtocol {
                     ])
                     
                 }
-                
-                
-                
+            
                 self.alert?.getAlert(titulo: "Parabens", mensagem: "Usuario cadastrado com sucesso",completion: {
-                    self.navigationController?.popViewController(animated: true)
+                    let VC = HomeVC()
+                    let naviVc = UINavigationController(rootViewController: VC)
+                    naviVc.modalPresentationStyle = .fullScreen
+                    self.present(naviVc, animated: true, completion: nil)
                 })
     
             }

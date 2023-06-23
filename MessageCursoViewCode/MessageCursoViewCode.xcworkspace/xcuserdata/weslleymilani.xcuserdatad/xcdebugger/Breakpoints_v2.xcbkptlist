@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "0BF17844-4266-44F8-A903-5A479625FC9F"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F33D50E5-AA4E-4A0E-BC73-668F0BD20640"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MessageCursoViewCode/Home/NaviView/NaviView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "141"
+            endingLineNumber = "141"
+            landmarkName = "setUpContraints()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D43C5F44-7096-4436-BF74-F69F5469F6D0"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MessageCursoViewCode/Home/NaviView/NaviView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "140"
+            endingLineNumber = "140"
+            landmarkName = "setUpContraints()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "D43C5F44-7096-4436-BF74-F69F5469F6D0 - 7aea16fe439b1f6b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MessageCursoViewCode.NaviView.setUpContraints() -&gt; ()"
+                  moduleName = "MessageCursoViewCode"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/weslleymilani/Documents/Desenvolvimento/MessageApp/MessageCursoViewCode/MessageCursoViewCode/Home/NaviView/NaviView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "140"
+                  endingLineNumber = "140"
+                  offsetFromSymbolStart = "48">
+               </Location>
+               <Location
+                  uuid = "D43C5F44-7096-4436-BF74-F69F5469F6D0 - 7aea16fe439b1f0a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MessageCursoViewCode.NaviView.setUpContraints() -&gt; ()"
+                  moduleName = "MessageCursoViewCode"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/weslleymilani/Documents/Desenvolvimento/MessageApp/MessageCursoViewCode/MessageCursoViewCode/Home/NaviView/NaviView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "141"
+                  endingLineNumber = "141"
+                  offsetFromSymbolStart = "48">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C0A40D9B-267C-456D-8D7B-87B7BD0F1794"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MessageCursoViewCode/Home/NaviView/NaviView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "178"
+            endingLineNumber = "178"
+            landmarkName = "init?(coder:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1660C59D-7CCD-4853-85E7-20F1C1EA3B93"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MessageCursoViewCode/Home/NaviView/NaviView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "175"
+            endingLineNumber = "175"
+            landmarkName = "NaviView"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "1660C59D-7CCD-4853-85E7-20F1C1EA3B93 - 47d98c9de180b27b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MessageCursoViewCode.NaviView.__allocating_init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;MessageCursoViewCode.NaviView&gt;"
+                  moduleName = "MessageCursoViewCode"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/weslleymilani/Documents/Desenvolvimento/MessageApp/MessageCursoViewCode/MessageCursoViewCode/Home/NaviView/NaviView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "20">
+               </Location>
+               <Location
+                  uuid = "1660C59D-7CCD-4853-85E7-20F1C1EA3B93 - 8200cfc85ae0d492"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "MessageCursoViewCode.NaviView.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;MessageCursoViewCode.NaviView&gt;"
+                  moduleName = "MessageCursoViewCode"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/weslleymilani/Documents/Desenvolvimento/MessageApp/MessageCursoViewCode/MessageCursoViewCode/Home/NaviView/NaviView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "104">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

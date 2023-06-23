@@ -24,7 +24,7 @@ class NaviView: UIView {
         self.delegate = delegate
     }
     
-     var  naviBackGroundView:UIView = {
+     lazy var  naviBackGroundView:UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.backgroundColor = .white
@@ -38,15 +38,15 @@ class NaviView: UIView {
         return view
     }()
     
-    var navBar: UIView {
+    var navBar: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.backgroundColor = .clear
         
         return view
-    }
+    }()
     
-    var searchBar: UIView {
+    var searchBar: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.backgroundColor = CustomColor.appLight
@@ -54,9 +54,9 @@ class NaviView: UIView {
         view.layer.cornerRadius = 20
     
         return view
-    }
+    }()
     
-    var searchLabel: UILabel {
+    var searchLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "Digite Aqui"
@@ -64,15 +64,15 @@ class NaviView: UIView {
         label.textColor = .lightGray
         
         return label
-    }
+    }()
     
-    var searchBtn:UIButton {
+    var searchBtn:UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setImage(UIImage(named: "search"), for: .normal)
         
         return button
-    }
+    }()
     
     let stackView:UIStackView = {
         let stack = UIStackView()
@@ -87,7 +87,7 @@ class NaviView: UIView {
     var conversationButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setImage(UIImage(named: "message")?.withRenderingMode(.alwaysTemplate), for: .normal)
+        button.setImage(UIImage(systemName: "message")?.withRenderingMode(.alwaysTemplate), for: .normal)
         button.tintColor = .systemPink
         button.addTarget(NaviView.self, action: #selector(tappedConversationButton), for: .touchUpInside)
         
@@ -99,6 +99,7 @@ class NaviView: UIView {
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setImage(UIImage(named: "group")?.withRenderingMode(.alwaysTemplate), for: .normal)
         button.addTarget(NaviView.self, action: #selector(tappedContactButton), for: .touchUpInside)
+        button.tintColor = .systemPink
         return button
     }()
     
@@ -110,62 +111,68 @@ class NaviView: UIView {
     }
     
     @objc func tappedContactButton(){
-        self.delegate?.typeScreenMessage(type: .contact)
-        self.contactButton.tintColor = .black
-        self.contactButton.tintColor = .systemPink
+        delegate?.typeScreenMessage(type: .contact)
+        contactButton.tintColor = .black
+        contactButton.tintColor = .systemPink
         
     }
     
-    func setUpContraints(){
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        self.addElemented()
+        self.setUpContraints()
+       
+    }
+    
+   private func addElemented(){
+        addSubview(naviBackGroundView)
+       naviBackGroundView.addSubview(self.navBar)
+       navBar.addSubview(self.searchBar)
+       navBar.addSubview(self.stackView)
+       searchBar.addSubview(self.searchLabel)
+       searchBar.addSubview(self.searchBtn)
+       stackView.addArrangedSubview(self.conversationButton)
+       stackView.addArrangedSubview(self.contactButton)
+
+        
+    }
+    
+    private func setUpContraints(){
         NSLayoutConstraint.activate([
         
             self.naviBackGroundView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
             self.naviBackGroundView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
             self.naviBackGroundView.topAnchor.constraint(equalTo: self.topAnchor),
             self.naviBackGroundView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
-            
+
             self.navBar.topAnchor.constraint(equalTo: self.safeAreaLayoutGuide.topAnchor),
+            self.navBar.leadingAnchor.constraint(equalTo: self.leadingAnchor),
             self.navBar.trailingAnchor.constraint(equalTo: self.trailingAnchor),
-            self.navBar.topAnchor.constraint(equalTo: self.topAnchor),
             self.navBar.bottomAnchor.constraint(equalTo: self.bottomAnchor),
-            
+
             self.searchBar.leadingAnchor.constraint(equalTo: self.navBar.leadingAnchor, constant: 30),
             self.searchBar.centerYAnchor.constraint(equalTo: self.navBar.centerYAnchor),
-            self.searchBar.trailingAnchor.constraint(equalTo: self.navBar.leadingAnchor, constant:  -20),
+            self.searchBar.trailingAnchor.constraint(equalTo: self.navBar.trailingAnchor, constant:  -20),
             self.searchBar.heightAnchor.constraint(equalToConstant: 55),
+            
             
             self.stackView.trailingAnchor.constraint(equalTo: self.navBar.trailingAnchor, constant: -30),
             self.stackView.centerYAnchor.constraint(equalTo: self.navBar.centerYAnchor),
             self.stackView.widthAnchor.constraint(equalToConstant: 100),
             self.stackView.heightAnchor.constraint(equalToConstant: 30),
             
+            
             self.searchLabel.leadingAnchor.constraint(equalTo: self.searchBar.leadingAnchor, constant: 25),
             self.searchLabel.centerYAnchor.constraint(equalTo: self.searchBar.centerYAnchor),
             
-            self.searchBtn.leadingAnchor.constraint(equalTo: self.searchBar.leadingAnchor,constant: -20),
+            self.searchBtn.trailingAnchor.constraint(equalTo: self.searchBar.trailingAnchor,constant: -20),
             self.searchBtn.centerYAnchor.constraint(equalTo: self.searchBar.centerYAnchor),
             self.searchBtn.widthAnchor.constraint(equalToConstant: 20),
             self.searchBtn.heightAnchor.constraint(equalToConstant: 20),
-                        
+
         ])
     }
 
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        self.setUpContraints()
-    }
-    
-    func addElemented(){
-        self.addSubview(naviBackGroundView)
-        self.naviBackGroundView.addSubview(navBar)
-        self.navBar.addSubview(searchBar)
-        self.navBar.addSubview(stackView)
-        self.searchBar.addSubview(searchLabel)
-        self.searchBtn.addSubview(searchBtn)
-        self.stackView.addArrangedSubview(conversationButton)
-        self.stackView.addArrangedSubview(contactButton)
-    
-    }
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }

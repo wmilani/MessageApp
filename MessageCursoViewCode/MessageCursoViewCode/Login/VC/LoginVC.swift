@@ -58,8 +58,12 @@ extension LoginVC:LoginScreenProtocol{
                     if  usuario  == nil {
                         self.alert?.getAlert(titulo: "Atencao",mensagem: "tivemos um problema inesperado, tente novamente mais tarde.")
                     } else {
-                        self.alert?.getAlert(titulo: "Parabens",mensagem: "Usuário logado com sucesso!")
-
+//                        self.alert?.getAlert(titulo: "Parabens",mensagem: "Usuário logado com sucesso!")
+                        let VC = HomeVC()
+                        let naviVc = UINavigationController(rootViewController: VC)
+                        naviVc.modalPresentationStyle = .fullScreen
+                        self.present(naviVc, animated: true, completion: nil)
+                        
                     }
                 }
             })
