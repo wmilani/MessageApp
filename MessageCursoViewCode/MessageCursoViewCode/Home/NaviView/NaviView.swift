@@ -38,7 +38,7 @@ class NaviView: UIView {
         return view
     }()
     
-    var navBar: UIView = {
+    lazy var navBar: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
         view.backgroundColor = .clear
@@ -56,7 +56,7 @@ class NaviView: UIView {
         return view
     }()
     
-    var searchLabel: UILabel = {
+    lazy var searchLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
         label.text = "Digite Aqui"
@@ -66,7 +66,7 @@ class NaviView: UIView {
         return label
     }()
     
-    var searchBtn:UIButton = {
+    lazy var searchBtn:UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setImage(UIImage(named: "search"), for: .normal)
@@ -84,7 +84,7 @@ class NaviView: UIView {
         return stack
     }()
     
-    var conversationButton: UIButton = {
+    lazy var conversationButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setImage(UIImage(systemName: "message")?.withRenderingMode(.alwaysTemplate), for: .normal)
@@ -152,7 +152,7 @@ class NaviView: UIView {
 
             self.searchBar.leadingAnchor.constraint(equalTo: self.navBar.leadingAnchor, constant: 30),
             self.searchBar.centerYAnchor.constraint(equalTo: self.navBar.centerYAnchor),
-            self.searchBar.trailingAnchor.constraint(equalTo: self.navBar.trailingAnchor, constant:  -20),
+            self.searchBar.trailingAnchor.constraint(equalTo: self.stackView.leadingAnchor, constant:  -20),
             self.searchBar.heightAnchor.constraint(equalToConstant: 55),
             
             
