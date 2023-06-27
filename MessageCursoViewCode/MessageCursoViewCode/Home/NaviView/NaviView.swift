@@ -89,17 +89,17 @@ class NaviView: UIView {
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setImage(UIImage(systemName: "message")?.withRenderingMode(.alwaysTemplate), for: .normal)
         button.tintColor = .systemPink
-        button.addTarget(NaviView.self, action: #selector(tappedConversationButton), for: .touchUpInside)
+        button.addTarget(self, action: #selector(self.tappedConversationButton), for: .touchUpInside)
         
         return button
     }()
     
-    var contactButton: UIButton = {
+    lazy var contactButton: UIButton = {
         let button = UIButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setImage(UIImage(named: "group")?.withRenderingMode(.alwaysTemplate), for: .normal)
-        button.addTarget(NaviView.self, action: #selector(tappedContactButton), for: .touchUpInside)
-        button.tintColor = .systemPink
+        button.addTarget(self, action: #selector(self.tappedContactButton), for: .touchUpInside)
+        button.tintColor = .black
         return button
     }()
     
@@ -111,7 +111,7 @@ class NaviView: UIView {
     }
     
     @objc func tappedContactButton(){
-        delegate?.typeScreenMessage(type: .contact)
+        self.delegate?.typeScreenMessage(type: .contact)
         contactButton.tintColor = .black
         contactButton.tintColor = .systemPink
         
