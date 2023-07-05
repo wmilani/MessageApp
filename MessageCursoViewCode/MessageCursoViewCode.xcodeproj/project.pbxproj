@@ -10,6 +10,7 @@
 		83D7A1F0079FD1289CF6732C /* Pods_MessageCursoViewCode.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86CC74D52113E768E891D7E6 /* Pods_MessageCursoViewCode.framework */; };
 		EA079E1B2A38F6DE00D34E7A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA079E1A2A38F6DE00D34E7A /* GoogleService-Info.plist */; };
 		EA079E1D2A38F9C100D34E7A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA079E1C2A38F9C000D34E7A /* Assets.xcassets */; };
+		EA55BD1F2A55EF9C00879355 /* MessageAllModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA55BD1E2A55EF9C00879355 /* MessageAllModel.swift */; };
 		EA5F4E882A38E0400098641F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5F4E872A38E0400098641F /* AppDelegate.swift */; };
 		EA5F4E8A2A38E0400098641F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5F4E892A38E0400098641F /* SceneDelegate.swift */; };
 		EA5F4E942A38E0420098641F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA5F4E922A38E0420098641F /* LaunchScreen.storyboard */; };
@@ -33,6 +34,7 @@
 		86CC74D52113E768E891D7E6 /* Pods_MessageCursoViewCode.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MessageCursoViewCode.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA079E1A2A38F6DE00D34E7A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EA079E1C2A38F9C000D34E7A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../../ViewCode/CursoViewCode/CursoViewCode/Assets.xcassets; sourceTree = "<group>"; };
+		EA55BD1E2A55EF9C00879355 /* MessageAllModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageAllModel.swift; sourceTree = "<group>"; };
 		EA5F4E842A38E0400098641F /* MessageCursoViewCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MessageCursoViewCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA5F4E872A38E0400098641F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EA5F4E892A38E0400098641F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -84,6 +86,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		EA55BD1D2A55EF8500879355 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EA55BD1E2A55EF9C00879355 /* MessageAllModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		EA5F4E7B2A38E0400098641F = {
 			isa = PBXGroup;
 			children = (
@@ -105,6 +115,7 @@
 		EA5F4E862A38E0400098641F /* MessageCursoViewCode */ = {
 			isa = PBXGroup;
 			children = (
+				EA55BD1D2A55EF8500879355 /* Model */,
 				EA7342EC2A3A9B4B0091155C /* Utils */,
 				EA5F4EA92A38E1E30098641F /* Alert */,
 				EAD043172A420AC100059899 /* Home */,
@@ -363,6 +374,7 @@
 				EA5F4EA52A38E0940098641F /* LoginVC.swift in Sources */,
 				EA7342F22A3A9E3E0091155C /* Extension+UIView.swift in Sources */,
 				EA5F4EA82A38E0940098641F /* RegisterScreen.swift in Sources */,
+				EA55BD1F2A55EF9C00879355 /* MessageAllModel.swift in Sources */,
 				EA5F4EA72A38E0940098641F /* RegisterVC.swift in Sources */,
 				EA7342F42A3A9F860091155C /* Custom.swift in Sources */,
 				EAD0431C2A420DA400059899 /* HomeScreen.swift in Sources */,
