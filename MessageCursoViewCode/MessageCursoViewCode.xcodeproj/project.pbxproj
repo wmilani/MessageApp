@@ -11,6 +11,7 @@
 		EA079E1B2A38F6DE00D34E7A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EA079E1A2A38F6DE00D34E7A /* GoogleService-Info.plist */; };
 		EA079E1D2A38F9C100D34E7A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA079E1C2A38F9C000D34E7A /* Assets.xcassets */; };
 		EA55BD1F2A55EF9C00879355 /* MessageAllModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA55BD1E2A55EF9C00879355 /* MessageAllModel.swift */; };
+		EA55BD222A55F4FE00879355 /* MessageLastCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA55BD212A55F4FE00879355 /* MessageLastCollectionViewCell.swift */; };
 		EA5F4E882A38E0400098641F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5F4E872A38E0400098641F /* AppDelegate.swift */; };
 		EA5F4E8A2A38E0400098641F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA5F4E892A38E0400098641F /* SceneDelegate.swift */; };
 		EA5F4E942A38E0420098641F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA5F4E922A38E0420098641F /* LaunchScreen.storyboard */; };
@@ -35,6 +36,7 @@
 		EA079E1A2A38F6DE00D34E7A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EA079E1C2A38F9C000D34E7A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../../ViewCode/CursoViewCode/CursoViewCode/Assets.xcassets; sourceTree = "<group>"; };
 		EA55BD1E2A55EF9C00879355 /* MessageAllModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageAllModel.swift; sourceTree = "<group>"; };
+		EA55BD212A55F4FE00879355 /* MessageLastCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageLastCollectionViewCell.swift; sourceTree = "<group>"; };
 		EA5F4E842A38E0400098641F /* MessageCursoViewCode.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MessageCursoViewCode.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA5F4E872A38E0400098641F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EA5F4E892A38E0400098641F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -92,6 +94,14 @@
 				EA55BD1E2A55EF9C00879355 /* MessageAllModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		EA55BD202A55F4C000879355 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				EA55BD212A55F4FE00879355 /* MessageLastCollectionViewCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		EA5F4E7B2A38E0400098641F = {
@@ -231,6 +241,7 @@
 		EAD043172A420AC100059899 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				EA55BD202A55F4C000879355 /* Cell */,
 				EAD0431D2A420E7F00059899 /* NaviView */,
 				EAD0431A2A420D8A00059899 /* Screen */,
 				EAD043182A420D5600059899 /* HomeVC.swift */,
@@ -383,6 +394,7 @@
 				EA5F4EA62A38E0940098641F /* LoginScreen.swift in Sources */,
 				EAD043192A420D5600059899 /* HomeVC.swift in Sources */,
 				EA5F4EAB2A38E1E30098641F /* Alert.swift in Sources */,
+				EA55BD222A55F4FE00879355 /* MessageLastCollectionViewCell.swift in Sources */,
 				EA7342FA2A3AA2CD0091155C /* Extension+Button.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
