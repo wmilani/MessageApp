@@ -24,6 +24,7 @@
 		EA7342F42A3A9F860091155C /* Custom.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7342F32A3A9F860091155C /* Custom.swift */; };
 		EA7342FA2A3AA2CD0091155C /* Extension+Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7342F92A3AA2CD0091155C /* Extension+Button.swift */; };
 		EA7342FC2A3AA49D0091155C /* Extension+String.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA7342FB2A3AA49D0091155C /* Extension+String.swift */; };
+		EA8E17A62A5BCBAE003A2806 /* MessageDetailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8E17A52A5BCBAE003A2806 /* MessageDetailCollectionViewCell.swift */; };
 		EAD043192A420D5600059899 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD043182A420D5600059899 /* HomeVC.swift */; };
 		EAD0431C2A420DA400059899 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD0431B2A420DA400059899 /* HomeScreen.swift */; };
 		EAD0431F2A420EA200059899 /* NaviView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD0431E2A420EA200059899 /* NaviView.swift */; };
@@ -54,6 +55,7 @@
 		EA7342F82A3AA1180091155C /* Poppins-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-SemiBold.ttf"; sourceTree = "<group>"; };
 		EA7342F92A3AA2CD0091155C /* Extension+Button.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Button.swift"; sourceTree = "<group>"; };
 		EA7342FB2A3AA49D0091155C /* Extension+String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+String.swift"; sourceTree = "<group>"; };
+		EA8E17A52A5BCBAE003A2806 /* MessageDetailCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageDetailCollectionViewCell.swift; sourceTree = "<group>"; };
 		EAD043182A420D5600059899 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		EAD0431B2A420DA400059899 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		EAD0431E2A420EA200059899 /* NaviView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaviView.swift; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				EA55BD212A55F4FE00879355 /* MessageLastCollectionViewCell.swift */,
+				EA8E17A52A5BCBAE003A2806 /* MessageDetailCollectionViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -396,6 +399,7 @@
 				EA5F4EAB2A38E1E30098641F /* Alert.swift in Sources */,
 				EA55BD222A55F4FE00879355 /* MessageLastCollectionViewCell.swift in Sources */,
 				EA7342FA2A3AA2CD0091155C /* Extension+Button.swift in Sources */,
+				EA8E17A62A5BCBAE003A2806 /* MessageDetailCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
