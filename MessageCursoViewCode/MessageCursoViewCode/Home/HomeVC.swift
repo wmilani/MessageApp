@@ -10,8 +10,6 @@ import Firebase
 
 
 class HomeVC: UIViewController {
-
-    var screen:HomeScreen?
     
     var auth:Auth?
     var db:Firestore?
@@ -21,6 +19,14 @@ class HomeVC: UIViewController {
     var screenContact: Bool?
     var emailUsuarioLogado: String?
     var alert:Alert?
+    
+    
+    var screen:HomeScreen?
+    
+    var contato:ContatoController?
+    var listaContact:[Contact] = []
+    var listaConversas: [Conversation] = []
+    var conversasListener:ListenerRegistration?
     
     
     override func loadView() {
@@ -35,6 +41,8 @@ class HomeVC: UIViewController {
         configHomeView()
         configCollectionView()
         configAlert()
+        configIdentifierFirebase()
+        addListenerRecuperarConversa()
     }
     
     
@@ -49,7 +57,72 @@ class HomeVC: UIViewController {
     private func configAlert(){
         self.alert = Alert(controller: self)
     }
-   
+    
+    private func configIdentifierFirebase(){
+        self.auth = Auth.auth()
+        self.db = Firestore.firestore()
+        
+        // Recuperar Id Usuario Logado
+        
+        if let currentUser = auth?.currentUser {
+            self.idUsuarioLogado = currentUser.uid
+            self.emailUsuarioLogado = currentUser.email
+        }
+    }
+    
+    private func configContato(){
+        self.contato = ContatoController()
+        self.contato?.delegate(delegate: self)
+    }
+    
+    
+    func addListenerRecuperarConversa(){
+        
+        if let idUsuarioLogado = auth?.currentUser?.uid{
+            self.conversasListener = db?.collection("conversas").document(idUsuarioLogado).collection("ultimas_conversas").addSnapshotListener({
+                querSnaphot, error in
+                
+                if error == nil {
+                    self.listaConversas.removeAll()
+                    
+                    if let snapshot = querSnaphot {
+                        for document in snapshot.documents{
+                            let dados = document.data()
+                            self.listaConversas.append(Conversation(dicionario: dados))
+                        }
+                    }
+                }
+            })
+        }
+    }
+    
+    func getContato(){
+        
+        self.listaContact.removeAll()
+        self.db?.collection("usuarios").document(self.idUsuarioLogado ?? "").collection("contatos").getDocuments(completion: {snapShotResultado, error in
+            
+            if error != nil {
+                print("Error getContato")
+                return
+            }
+            
+            if let snapshot = snapShotResultado {
+                for document in snapshot.documents {
+                    let dadosContato = document.data()
+                    self.listaContact.append(Contact(dicionario: dadosContato))
+                }
+                self.screen?.reloadCollectionView()
+            }
+        })
+        
+        
+    }
+    
+    
+    
+    
+    
+    
 }
 
 extension HomeVC: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
@@ -80,12 +153,30 @@ extension HomeVC:NavViewProtocol {
     func typeScreenMessage(type: TypeConversationOrContact) {
         
         switch type {
-        case    .contact:
+        case .contact:
             self.screenContact = true
+            self.getContato()
         case .conversation:
             self.screenContact = false
-    
+            self.addListenerRecuperarConversa()
+            self.screen?.reloadCollectionView()
             }
         
         }
+    
+}
+
+
+extension HomeVC:ContatoProtocol{
+    func alertStateError(titulo: String, message: String) {
+        self.alert?.getAlert(titulo: titulo, mensagem: message)
+    }
+    
+    func sucessContato() {
+        self.alert?.getAlert(titulo: "Ebaaaaaaaa", mensagem: "Usuario cadastrado com sucesso!", completion:{
+            self.getContato()
+        })
+    }
+    
+    
 }

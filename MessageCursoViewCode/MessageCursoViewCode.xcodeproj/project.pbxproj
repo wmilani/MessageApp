@@ -28,6 +28,7 @@
 		EAD043192A420D5600059899 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD043182A420D5600059899 /* HomeVC.swift */; };
 		EAD0431C2A420DA400059899 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD0431B2A420DA400059899 /* HomeScreen.swift */; };
 		EAD0431F2A420EA200059899 /* NaviView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAD0431E2A420EA200059899 /* NaviView.swift */; };
+		EAF59BF92A81D67000B150B2 /* ContatoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAF59BF82A81D67000B150B2 /* ContatoController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,6 +60,7 @@
 		EAD043182A420D5600059899 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		EAD0431B2A420DA400059899 /* HomeScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeScreen.swift; sourceTree = "<group>"; };
 		EAD0431E2A420EA200059899 /* NaviView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NaviView.swift; sourceTree = "<group>"; };
+		EAF59BF82A81D67000B150B2 /* ContatoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContatoController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -244,6 +246,7 @@
 		EAD043172A420AC100059899 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				EAF59BF72A81D63F00B150B2 /* Controller */,
 				EA55BD202A55F4C000879355 /* Cell */,
 				EAD0431D2A420E7F00059899 /* NaviView */,
 				EAD0431A2A420D8A00059899 /* Screen */,
@@ -266,6 +269,14 @@
 				EAD0431E2A420EA200059899 /* NaviView.swift */,
 			);
 			path = NaviView;
+			sourceTree = "<group>";
+		};
+		EAF59BF72A81D63F00B150B2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				EAF59BF82A81D67000B150B2 /* ContatoController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -391,6 +402,7 @@
 				EA55BD1F2A55EF9C00879355 /* MessageAllModel.swift in Sources */,
 				EA5F4EA72A38E0940098641F /* RegisterVC.swift in Sources */,
 				EA7342F42A3A9F860091155C /* Custom.swift in Sources */,
+				EAF59BF92A81D67000B150B2 /* ContatoController.swift in Sources */,
 				EAD0431C2A420DA400059899 /* HomeScreen.swift in Sources */,
 				EA5F4E8A2A38E0400098641F /* SceneDelegate.swift in Sources */,
 				EA7342FC2A3AA49D0091155C /* Extension+String.swift in Sources */,
